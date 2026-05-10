@@ -3,6 +3,8 @@
   stdenv,
   callPackage,
   fetchFromGitHub,
+  cacert,
+  pkgsi686Linux,
 
   inputs,
   millennium-shims,
@@ -10,6 +12,7 @@
   millennium-frontend,
   millennium-32,
   millennium-64,
+  millennium-python ? pkgsi686Linux.python311,
 }:
 stdenv.mkDerivation {
   pname = "millennium";
